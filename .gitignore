@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+
+node_modules/
+parse_server/node_modules/
+
+.superpowers/
+
+ppt-parser/frontend-slides/
+ppt-parser/server.pid
+ppt-parser/server.log

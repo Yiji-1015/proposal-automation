@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    margin: 0;
+    background: #eee;
+}
+
+.slide {
+    position: relative;
+    width: 1040px;
+    height: 720px;
+    background: white;
+    overflow: hidden;
+    font-family: Arial, 'Malgun Gothic', sans-serif;
+}
+
+.shape {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow: hidden;
+    padding: 2px;
+}
+</style>
+</head>
+<body>
+<section class="slide">
+
+        <div class="shape" style="
+            left:43px;
+            top:40px;
+            width:470px;
+            height:14px;
+        ">
+            3. 상세 구축방안 &gt; 3.1 기능  요구사항 &gt; 3.1.7 IT운영관리 &gt; 3.1.7.1 통합로그 기반 모니터링 환경 구축
+        </div>
+        
+        <div class="shape" style="
+            left:43px;
+            top:58px;
+            width:258px;
+            height:25px;
+        ">
+            3.1.7.1.7 로그 분석 및 시각화
+        </div>
+        
+        <div class="shape" style="
+            left:60px;
+            top:100px;
+            width:635px;
+            height:19px;
+        ">
+            업무 중요도와 운영 스케줄을 반영한 모니터링 정책으로 로그 스트림·이상 이벤트를 실시간 분석합니다.
+        </div>
+        
+        <div class="shape" style="
+            left:60px;
+            top:122px;
+            width:528px;
+            height:19px;
+        ">
+            서비스·시스템·부서별 대시보드를 통해 운영상태와 장애 원인을 신속하게 파악합니다.
+        </div>
+        
+        <div class="shape" style="
+            left:481px;
+            top:179px;
+            width:84px;
+            height:19px;
+        ">
+            요구사항 번호
+        </div>
+        
+        <div class="shape" style="
+            left:566px;
+            top:179px;
+            width:85px;
+            height:19px;
+        ">
+            SFR-IT-01
+        </div>
+        
+        <div class="shape" style="
+            left:716px;
+            top:390px;
+            width:279px;
+            height:22px;
+        ">
+            사용자 친화 로그 모니터링 (예시)
+        </div>
+        
+        <div class="shape" style="
+            left:716px;
+            top:184px;
+            width:281px;
+            height:22px;
+        ">
+            주요 모니터링 지표
+        </div>
+        
+        <div class="shape" style="
+            left:728px;
+            top:222px;
+            width:167px;
+            height:23px;
+        ">
+            거래 건수·TPS
+        </div>
+        
+        <div class="shape" style="
+            left:862px;
+            top:222px;
+            width:148px;
+            height:23px;
+        ">
+            평균·최대 처리시간
+        </div>
+        
+        <div class="shape" style="
+            left:728px;
+            top:252px;
+            width:167px;
+            height:23px;
+        ">
+            성공·실패 건수
+        </div>
+        
+        <div class="shape" style="
+            left:862px;
+            top:252px;
+            width:148px;
+            height:23px;
+        ">
+            오류율·주요 오류코드
+        </div>
+        
+        <div class="shape" style="
+            left:728px;
+            top:281px;
+            width:167px;
+            height:23px;
+        ">
+            서비스·시스템 상태
+        </div>
+        
+        <div class="shape" style="
+            left:862px;
+            top:280px;
+            width:148px;
+            height:23px;
+        ">
+            외부기관 연계 상태
+        </div>
+        
+        <div class="shape" style="
+            left:728px;
+            top:310px;
+            width:167px;
+            height:23px;
+        ">
+            배치 작업 진행률
+        </div>
+        
+        <div class="shape" style="
+            left:862px;
+            top:310px;
+            width:148px;
+            height:23px;
+        ">
+            지연·미처리 업무
+        </div>
+        
+        <div class="shape" style="
+            left:728px;
+            top:340px;
+            width:167px;
+            height:23px;
+        ">
+            실시간 이상 이벤트
+        </div>
+        
+        <div class="shape" style="
+            left:862px;
+            top:340px;
+            width:148px;
+            height:23px;
+        ">
+            업무별 점검 결과
+        </div>
+        
+        <div class="shape" style="
+            left:129px;
+            top:187px;
+            width:155px;
+            height:17px;
+        ">
+            서비스 흐름 기반 모니터링
+        </div>
+        
+        <div class="shape" style="
+            left:475px;
+            top:379px;
+            width:138px;
+            height:17px;
+        ">
+            사용자 맞춤형 대시보드
+        </div>
+        
+        <div class="shape" style="
+            left:466px;
+            top:187px;
+            width:155px;
+            height:17px;
+        ">
+            업무 스케줄 기반 운영점검
+        </div>
+        
+        <div class="shape" style="
+            left:106px;
+            top:379px;
+            width:208px;
+            height:17px;
+        ">
+            실시간 로그 분석 및 이상징후 탐지
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:245px;
+            width:43px;
+            height:15px;
+        ">
+            입력
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:272px;
+            width:43px;
+            height:15px;
+        ">
+            분석
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:299px;
+            width:43px;
+            height:15px;
+        ">
+            결과
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:326px;
+            width:43px;
+            height:15px;
+        ">
+            활용
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:245px;
+            width:43px;
+            height:15px;
+        ">
+            입력
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:272px;
+            width:43px;
+            height:15px;
+        ">
+            분석
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:299px;
+            width:43px;
+            height:15px;
+        ">
+            결과
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:326px;
+            width:43px;
+            height:15px;
+        ">
+            활용
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:245px;
+            width:43px;
+            height:15px;
+        ">
+            입력
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:272px;
+            width:43px;
+            height:15px;
+        ">
+            분석
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:299px;
+            width:43px;
+            height:15px;
+        ">
+            결과
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:326px;
+            width:43px;
+            height:15px;
+        ">
+            활용
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:245px;
+            width:43px;
+            height:15px;
+        ">
+            입력
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:272px;
+            width:43px;
+            height:15px;
+        ">
+            분석
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:299px;
+            width:43px;
+            height:15px;
+        ">
+            결과
+        </div>
+        
+        <div class="shape" style="
+            left:38px;
+            top:326px;
+            width:43px;
+            height:15px;
+        ">
+            활용
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:226px;
+            width:241px;
+            height:16px;
+        ">
+            거래·업무·서비스 처리 로그, 시스템 상태
+        </div>
+        
+        <div class="shape" style="
+            left:42px;
+            top:573px;
+            width:228px;
+            height:31px;
+        ">
+            대응 시나리오: 거래 지연 시
+        </div>
+        
+        <div class="shape" style="
+            left:42px;
+            top:573px;
+            width:228px;
+            height:31px;
+        ">
+            대응 시나리오: 배치 작업 실패 시
+        </div>
+        
+        <div class="shape" style="
+            left:681px;
+            top:573px;
+            width:314px;
+            height:22px;
+        ">
+            대응 시나리오: 오류 급증 시
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:255px;
+            width:241px;
+            height:32px;
+        ">
+            통합단말·채널·인터페이스·계정계 구간 연결 및 시간순 연계
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:295px;
+            width:241px;
+            height:32px;
+        ">
+            구간별 처리시간·지연위치·정상/지연/오류 상태 표시
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:333px;
+            width:241px;
+            height:32px;
+        ">
+            실패 구간 추적, 외부기관 지연 확인, 장애 최초 발생지점 식별
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:226px;
+            width:251px;
+            height:16px;
+        ">
+            일일 업무 스케줄, 시작·마감·센터컷·배치 일정
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:257px;
+            width:251px;
+            height:32px;
+        ">
+            예정시간 대비 지연·미처리·실패, 선·후행 업무 진행상태
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:295px;
+            width:251px;
+            height:32px;
+        ">
+            중요 업무 우선 표시, 점검 결과 및 미조치 항목 관리
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:338px;
+            width:251px;
+            height:16px;
+        ">
+            일일 점검 자동화, 마감·센터컷 지연 조기 발견
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:409px;
+            width:250px;
+            height:32px;
+        ">
+            실시간 로그 스트림, 거래량·처리시간·TPS·오류율
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:450px;
+            width:250px;
+            height:32px;
+        ">
+            규칙·임계치·키워드/오류코드·시계열 추세 기반 탐지
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:486px;
+            width:250px;
+            height:32px;
+        ">
+            이벤트 생성, 심각도 분류, 발생 시스템 상태 즉시 시각화
+        </div>
+        
+        <div class="shape" style="
+            left:110px;
+            top:524px;
+            width:250px;
+            height:32px;
+        ">
+            반복·연속 오류 감지, 원본 로그·거래정보 연계 분석
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:410px;
+            width:250px;
+            height:32px;
+        ">
+            사용자 역할·부서·관심 업무, 조회 필터(기간/시스템/등급)
+        </div>
+        
+        <div class="shape" style="
+            left:444px;
+            top:454px;
+            width:250px;
+            height:16px;
+        ">
+            요약 지표 집계, 정상/주의/장애 상태 색상 구분
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:482px;
+            width:229px;
+            height:32px;
+        ">
+            전사·서비스·시스템·업무별 화면, 사용자 정의 화면 저장
+        </div>
+        
+        <div class="shape" style="
+            left:446px;
+            top:522px;
+            width:229px;
+            height:32px;
+        ">
+            반복 운영점검 화면 재사용, 이벤트·미조치 통합 제공
+        </div>
+        
+        <div class="shape" style="
+            left:56px;
+            top:597px;
+            width:292px;
+            height:64px;
+        ">
+            1. 처리시간 증가 감지<br>2. 지연 구간·외부기관 상태 확인<br>3. 동일 거래 연관 로그 조회  <br>4. 원인 오류·영향거래 식별
+        </div>
+        
+        <div class="shape" style="
+            left:373px;
+            top:597px;
+            width:292px;
+            height:64px;
+        ">
+            1. 예정시간 내 미완료/실패 감지  <br>2. 선·후행 작업 영향 확인 <br>3. 오류 로그·작업 결과 조회 <br>4. 마감·후속 업무 영향 분석
+        </div>
+        
+        <div class="shape" style="
+            left:691px;
+            top:597px;
+            width:292px;
+            height:64px;
+        ">
+            1. 오류코드·키워드 급증 탐지     <br>2. 발생 시스템·업무·시간대 분석  <br>3. 거래량·처리시간 비교<br>4. 상세 로그로 원인 분석
+        </div>
+        
+</section>
+</body>
+</html>

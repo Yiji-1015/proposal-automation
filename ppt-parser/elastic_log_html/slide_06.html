@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    margin: 0;
+    background: #eee;
+}
+
+.slide {
+    position: relative;
+    width: 1040px;
+    height: 720px;
+    background: white;
+    overflow: hidden;
+    font-family: Arial, 'Malgun Gothic', sans-serif;
+}
+
+.shape {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow: hidden;
+    padding: 2px;
+}
+</style>
+</head>
+<body>
+<section class="slide">
+
+        <div class="shape" style="
+            left:43px;
+            top:40px;
+            width:470px;
+            height:14px;
+        ">
+            3. 상세 구축방안 &gt; 3.1 기능  요구사항 &gt; 3.1.7 IT운영관리 &gt; 3.1.7.1 통합로그 기반 모니터링 환경 구축
+        </div>
+        
+        <div class="shape" style="
+            left:43px;
+            top:58px;
+            width:359px;
+            height:25px;
+        ">
+            3.1.7.1.6 로그 수집 위한 주요 시스템 연계
+        </div>
+        
+        <div class="shape" style="
+            left:60px;
+            top:100px;
+            width:551px;
+            height:19px;
+        ">
+            주요 운영시스템의 로그·거래·장애·변경정보를 표준 수집체계로 통합합니다.
+        </div>
+        
+        <div class="shape" style="
+            left:60px;
+            top:122px;
+            width:614px;
+            height:19px;
+        ">
+            공통 식별정보를 기반으로 시스템별 로그를 연결하여 거래 흐름과 장애 영향을 신속하게 추적합니다.
+        </div>
+        
+        <div class="shape" style="
+            left:481px;
+            top:179px;
+            width:84px;
+            height:19px;
+        ">
+            요구사항 번호
+        </div>
+        
+        <div class="shape" style="
+            left:566px;
+            top:179px;
+            width:85px;
+            height:19px;
+        ">
+            SFR-IT-01
+        </div>
+        
+        <div class="shape" style="
+            left:57px;
+            top:164px;
+            width:104px;
+            height:22px;
+        ">
+            연계 아키텍처
+        </div>
+        
+        <div class="shape" style="
+            left:338px;
+            top:213px;
+            width:288px;
+            height:28px;
+        ">
+            표준 연계·수집 계층
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:250px;
+            width:240px;
+            height:21px;
+        ">
+            수집 어댑터
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:270px;
+            width:240px;
+            height:21px;
+        ">
+            파일·Syslog·API 등 원천 특성별 연계
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:299px;
+            width:240px;
+            height:21px;
+        ">
+            파싱·정규화
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:319px;
+            width:240px;
+            height:21px;
+        ">
+            이기종 로그를 공통 구조로 변환
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:344px;
+            width:240px;
+            height:21px;
+        ">
+            공통 메타데이터
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:363px;
+            width:240px;
+            height:21px;
+        ">
+            시각·시스템·업무·채널·로그유형 부여
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:388px;
+            width:240px;
+            height:21px;
+        ">
+            추적 식별정보
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:407px;
+            width:240px;
+            height:21px;
+        ">
+            거래번호·전문번호·작업ID·변경ID 매핑
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:434px;
+            width:240px;
+            height:21px;
+        ">
+            연계 상태 관리
+        </div>
+        
+        <div class="shape" style="
+            left:365px;
+            top:450px;
+            width:240px;
+            height:21px;
+        ">
+            성공·실패·지연·누락 모니터링
+        </div>
+        
+        <div class="shape" style="
+            left:241px;
+            top:214px;
+            width:105px;
+            height:19px;
+        ">
+            배치 결과·스케줄
+        </div>
+        
+        <div class="shape" style="
+            left:259px;
+            top:278px;
+            width:75px;
+            height:19px;
+        ">
+            거래 흐름·<br>인터페이스
+        </div>
+        
+        <div class="shape" style="
+            left:252px;
+            top:358px;
+            width:82px;
+            height:19px;
+        ">
+            장애·진행상태
+        </div>
+        
+        <div class="shape" style="
+            left:252px;
+            top:430px;
+            width:82px;
+            height:19px;
+        ">
+            변경·영향정보
+        </div>
+        
+        <div class="shape" style="
+            left:92px;
+            top:211px;
+            width:162px;
+            height:45px;
+        ">
+            작업관리도구<br>Control-M
+        </div>
+        
+        <div class="shape" style="
+            left:92px;
+            top:283px;
+            width:162px;
+            height:45px;
+        ">
+            온라인 거래<br>E2E
+        </div>
+        
+        <div class="shape" style="
+            left:92px;
+            top:356px;
+            width:162px;
+            height:45px;
+        ">
+            계정계·채널
+        </div>
+        
+        <div class="shape" style="
+            left:92px;
+            top:428px;
+            width:162px;
+            height:45px;
+        ">
+            형상관리
+        </div>
+        
+        <div class="shape" style="
+            left:638px;
+            top:205px;
+            width:316px;
+            height:24px;
+        ">
+            통합로그 플랫폼
+        </div>
+        
+        <div class="shape" style="
+            left:737px;
+            top:258px;
+            width:116px;
+            height:17px;
+        ">
+            표준 로그 통합 저장
+        </div>
+        
+        <div class="shape" style="
+            left:735px;
+            top:317px;
+            width:121px;
+            height:17px;
+        ">
+            거래·업무·흐름 연결
+        </div>
+        
+        <div class="shape" style="
+            left:723px;
+            top:376px;
+            width:145px;
+            height:17px;
+        ">
+            장애·변경정보 연관 분석
+        </div>
+        
+        <div class="shape" style="
+            left:725px;
+            top:435px;
+            width:140px;
+            height:17px;
+        ">
+            통합검색·모니터링 활용
+        </div>
+        
+        <div class="shape" style="
+            left:45px;
+            top:562px;
+            width:97px;
+            height:58px;
+        ">
+            공통 로그 표준화<br>및 연계 관리
+        </div>
+        
+        <div class="shape" style="
+            left:220px;
+            top:588px;
+            width:119px;
+            height:17px;
+        ">
+            공통 필드 표준화
+        </div>
+        
+        <div class="shape" style="
+            left:196px;
+            top:619px;
+            width:168px;
+            height:29px;
+        ">
+            시스템·업무·채널·로그유형, 발생·수집시각
+        </div>
+        
+        <div class="shape" style="
+            left:220px;
+            top:585px;
+            width:119px;
+            height:23px;
+        ">
+            추적 식별정보 유지
+        </div>
+        
+        <div class="shape" style="
+            left:196px;
+            top:619px;
+            width:168px;
+            height:18px;
+        ">
+            거래번호·전문번호·작업ID·변경ID
+        </div>
+        
+        <div class="shape" style="
+            left:220px;
+            top:585px;
+            width:119px;
+            height:23px;
+        ">
+            시간정보 정합성
+        </div>
+        
+        <div class="shape" style="
+            left:196px;
+            top:619px;
+            width:168px;
+            height:37px;
+        ">
+            시간 형식 통일·로그 발생 순서 재구성
+        </div>
+        
+        <div class="shape" style="
+            left:220px;
+            top:585px;
+            width:119px;
+            height:23px;
+        ">
+            연계 품질 관리
+        </div>
+        
+        <div class="shape" style="
+            left:196px;
+            top:619px;
+            width:168px;
+            height:37px;
+        ">
+            지연·누락·실패 감지·연계 정책 이력
+        </div>
+        
+        <div class="shape" style="
+            left:42px;
+            top:451px;
+            width:228px;
+            height:26px;
+        ">
+            Control-M 배치 로그
+        </div>
+        
+        <div class="shape" style="
+            left:51px;
+            top:503px;
+            width:220px;
+            height:32px;
+        ">
+            작업명·ID, 스케줄, 시작·종료, 성공·실패·지연, 처리결과, 선후행 흐름
+        </div>
+        
+        <div class="shape" style="
+            left:284px;
+            top:451px;
+            width:228px;
+            height:26px;
+        ">
+            온라인 거래 E2E
+        </div>
+        
+        <div class="shape" style="
+            left:293px;
+            top:501px;
+            width:220px;
+            height:48px;
+        ">
+            거래 식별정보, 인터페이스·외부기관 상태, 건수·처리시간·TPS, 오류·코어덤프
+        </div>
+        
+        <div class="shape" style="
+            left:526px;
+            top:451px;
+            width:228px;
+            height:26px;
+        ">
+            계정계·채널·인터페이스
+        </div>
+        
+        <div class="shape" style="
+            left:534px;
+            top:503px;
+            width:220px;
+            height:32px;
+        ">
+            계정계 장애·에러, 채널 오류, 거래량 추세, 단계별·센터컷 상태, 이상징후
+        </div>
+        
+        <div class="shape" style="
+            left:768px;
+            top:451px;
+            width:228px;
+            height:26px;
+        ">
+            형상관리·영향도분석
+        </div>
+        
+        <div class="shape" style="
+            left:772px;
+            top:501px;
+            width:220px;
+            height:32px;
+        ">
+            변경·배포 이력, 중요작업 진행, 점검사항, 지연·미처리 업무, 영향 범위
+        </div>
+        
+        <div class="shape" style="
+            left:51px;
+            top:482px;
+            width:153px;
+            height:17px;
+        ">
+            수집정보 및 활용목적
+        </div>
+        
+        <div class="shape" style="
+            left:293px;
+            top:482px;
+            width:153px;
+            height:17px;
+        ">
+            수집정보 및 활용목적
+        </div>
+        
+        <div class="shape" style="
+            left:532px;
+            top:482px;
+            width:153px;
+            height:17px;
+        ">
+            수집정보 및 활용목적
+        </div>
+        
+        <div class="shape" style="
+            left:777px;
+            top:482px;
+            width:153px;
+            height:17px;
+        ">
+            수집정보 및 활용목적
+        </div>
+        
+        <div class="shape" style="
+            left:51px;
+            top:542px;
+            width:220px;
+            height:32px;
+        ">
+            배치 진행현황 확인 · 실패/지연 식별 · 마감 운영점검
+        </div>
+        
+        <div class="shape" style="
+            left:292px;
+            top:550px;
+            width:220px;
+            height:32px;
+        ">
+            거래 흐름 추적 · 지연·오류 구간 확인 · 외부 영향 분석
+        </div>
+        
+        <div class="shape" style="
+            left:534px;
+            top:539px;
+            width:220px;
+            height:32px;
+        ">
+            핵심 업무 운영상태 확인 · 이상징후 감지 · 장애 영향 확인
+        </div>
+        
+        <div class="shape" style="
+            left:772px;
+            top:537px;
+            width:220px;
+            height:32px;
+        ">
+            변경·배포 연계 · 영향 범위 확인 · 중요작업 관리
+        </div>
+        
+</section>
+</body>
+</html>
