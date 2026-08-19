@@ -10,3 +10,6 @@ parse_server/node_modules/
 ppt-parser/frontend-slides/
 ppt-parser/server.pid
 ppt-parser/server.log
+
+ppt-parser/slides/
+ppt-parser/elastic_log_html/
